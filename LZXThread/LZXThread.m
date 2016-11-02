@@ -39,12 +39,14 @@
     [[NSThread currentThread] setName:_name];
     _runloop = [NSRunLoop currentRunLoop];
     _port = [NSMachPort port];
-    [_runloop addPort:_port forMode:UITrackingRunLoopMode];
-    [_runloop runMode:_mode beforeDate:[NSDate distantFuture]];
+    [_runloop addPort:_port forMode:_mode];
     [_runloop run];
 }
 
 - (void)setMode:(NSRunLoopMode)mode {
+    if ([mode isEqualToString:_mode]) {
+        return;
+    }
     if (self.port) {
         // 切换 mode
         [self.runloop addPort:self.port forMode:mode];

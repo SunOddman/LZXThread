@@ -19,6 +19,7 @@
 
 @implementation ViewController
 
+//http://blog.csdn.net/jeffasd/article/details/52023195
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
