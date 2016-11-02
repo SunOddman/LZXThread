@@ -13,6 +13,7 @@
 		3450E77C1DC9AEA1006DED95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3450E77A1DC9AEA1006DED95 /* Main.storyboard */; };
 		3450E77E1DC9AEA1006DED95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3450E77D1DC9AEA1006DED95 /* Assets.xcassets */; };
 		3450E7811DC9AEA1006DED95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3450E77F1DC9AEA1006DED95 /* LaunchScreen.storyboard */; };
+		3450E78F1DC9AFF1006DED95 /* LZXThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E78E1DC9AFF1006DED95 /* LZXThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		3450E77D1DC9AEA1006DED95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3450E7801DC9AEA1006DED95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3450E7821DC9AEA1006DED95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3450E78D1DC9AFF1006DED95 /* LZXThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZXThread.h; sourceTree = "<group>"; };
+		3450E78E1DC9AFF1006DED95 /* LZXThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZXThread.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 		3450E7651DC9AEA0006DED95 = {
 			isa = PBXGroup;
 			children = (
+				3450E78C1DC9AFF1006DED95 /* LZXThread */,
 				3450E7701DC9AEA0006DED95 /* LZXThreadDemo */,
 				3450E76F1DC9AEA0006DED95 /* Products */,
 			);
@@ -77,6 +81,16 @@
 				3450E7721DC9AEA1006DED95 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3450E78C1DC9AFF1006DED95 /* LZXThread */ = {
+			isa = PBXGroup;
+			children = (
+				3450E78D1DC9AFF1006DED95 /* LZXThread.h */,
+				3450E78E1DC9AFF1006DED95 /* LZXThread.m */,
+			);
+			name = LZXThread;
+			path = ../LZXThread;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3450E78F1DC9AFF1006DED95 /* LZXThread.m in Sources */,
 				3450E7791DC9AEA1006DED95 /* ViewController.m in Sources */,
 				3450E7761DC9AEA1006DED95 /* AppDelegate.m in Sources */,
 				3450E7731DC9AEA1006DED95 /* main.m in Sources */,
@@ -276,6 +291,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hdl.LZXThreadDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -288,6 +304,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hdl.LZXThreadDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -310,6 +327,7 @@
 				3450E7871DC9AEA1006DED95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

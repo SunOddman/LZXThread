@@ -39,7 +39,8 @@
     [[NSThread currentThread] setName:_name];
     _runloop = [NSRunLoop currentRunLoop];
     _port = [NSMachPort port];
-    [_runloop addPort:_port forMode:NSDefaultRunLoopMode];
+    [_runloop addPort:_port forMode:UITrackingRunLoopMode];
+    [_runloop runMode:_mode beforeDate:[NSDate distantFuture]];
     [_runloop run];
 }
 
@@ -64,7 +65,7 @@
 }
 
 - (void)releaseThread {
-    [self.runloop removePort:self.port forMode:NSDefaultRunLoopMode];
+    [self.runloop removePort:self.port forMode:_mode];
     [self.thread cancel];
 }
 
